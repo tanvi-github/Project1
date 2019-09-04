@@ -1,0 +1,11 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+  <form method="POST" enctype="multipart/form-data" action="index.html"><!--deal with documents..-->
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="/index.html">Return to home</a></p>
+{% endblock %}

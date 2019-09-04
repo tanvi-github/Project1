@@ -1,0 +1,14 @@
+{% extends 'app1/index.html' %}
+
+{% block content %}
+  {% if ".pdf" in image %}
+  <embed src="/static/Images/{{image}}" width="800px" height="2100px">
+   {% else %}
+   <img src="/static/Images/{{image}}">
+   {% endif %}
+
+    <br><a href="/static/Images/{{image}}" download>Download the pdf</a>
+
+
+  <p><a href="/index">Return to home</a></p>
+{% endblock %}

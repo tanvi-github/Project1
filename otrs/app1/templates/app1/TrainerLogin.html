@@ -1,0 +1,15 @@
+{% extends "app1/base.html" %}
+{% block title %}Trainer Login{%endblock%}
+<div>
+    {% block content %}
+        <form method="post">
+            <table>
+                {% csrf_token %}
+                {{ form.as_table }}
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Login"></td>
+                </tr>
+            </table>
+        </form>
+    {%endblock%}
+</div>
